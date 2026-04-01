@@ -10,19 +10,6 @@ INSERT INTO users (email, password) VALUES
 ('intan@gmail.com', '123456'),
 ('joko@gmail.com', '123456');
 
-
-INSERT INTO profiles (user_id, name, address, phone) VALUES
-(1, 'Andi Saputra', 'Bandung', '0811111111'),
-(2, 'Budi Santoso', 'Jakarta', '0822222222'),
-(3, 'Citra Lestari', 'Surabaya', '0833333333'),
-(4, 'Dedi Kurniawan', 'Medan', '0844444444'),
-(5, 'Eka Putri', 'Yogyakarta', '0855555555'),
-(6, 'Farah Aulia', 'Depok', '0866666666'),
-(7, 'Gina Maharani', 'Bogor', '0877777777'),
-(8, 'Hadi Pratama', 'Bekasi', '0888888888'),
-(9, 'Intan Permata', 'Semarang', '0899999999'),
-(10, 'Joko Widodo', 'Solo', '0810101010');
-
 INSERT INTO profiles (user_id, name, address, phone) VALUES
 (1, 'Andi Saputra', 'Bandung', '0811111111'),
 (2, 'Budi Santoso', 'Jakarta', '0822222222'),
@@ -84,29 +71,29 @@ INSERT INTO order_items (order_id, product_id, quantity) VALUES
 (20,9,2),(20,10,1);
 
 
-===total terjual per produk===
-SELECT 
-    p.name,
-    SUM(oi.quantity) AS total_terjual
-FROM order_items oi
-JOIN products p ON oi.product_id = p.id
-GROUP BY p.name
-ORDER BY total_terjual DESC;
+-- ===total terjual per produk===
+-- SELECT 
+--     p.name,
+--     SUM(oi.quantity) AS total_terjual
+-- FROM order_items oi
+-- JOIN products p ON oi.product_id = p.id
+-- GROUP BY p.name
+-- ORDER BY total_terjual DESC;
 
-=== order per customer===
-SELECT 
-    u.email,
-    COUNT(o.id) AS total_order
-FROM users u
-JOIN orders o ON u.id = o.user_id
-GROUP BY u.email
-ORDER BY total_order DESC;
+-- === order per customer===
+-- SELECT 
+--     u.email,
+--     COUNT(o.id) AS total_order
+-- FROM users u
+-- JOIN orders o ON u.id = o.user_id
+-- GROUP BY u.email
+-- ORDER BY total_order DESC;
 
 
-=== sisa stok per produk ===
-SELECT 
-    p.name,
-    p.stock - IFNULL(SUM(oi.quantity),0) AS sisa_stok
-FROM products p
-LEFT JOIN order_items oi ON p.id = oi.product_id
-GROUP BY p.id;
+-- === sisa stok per produk ===
+-- SELECT 
+--     p.name,
+--     p.stock - IFNULL(SUM(oi.quantity),0) AS sisa_stok
+-- FROM products p
+-- LEFT JOIN order_items oi ON p.id = oi.product_id
+-- GROUP BY p.id;
