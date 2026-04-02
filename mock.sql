@@ -1,14 +1,14 @@
-INSERT INTO users (email, password) VALUES
-('andi@gmail.com', '123456'),
-('budi@gmail.com', '123456'),
-('citra@gmail.com', '123456'),
-('dedi@gmail.com', '123456'),
-('eka@gmail.com', '123456'),
-('farah@gmail.com', '123456'),
-('gina@gmail.com', '123456'),
-('hadi@gmail.com', '123456'),
-('intan@gmail.com', '123456'),
-('joko@gmail.com', '123456');
+INSERT INTO users (username, email, password) VALUES
+('andi', 'andi@gmail.com', '123456'),
+('budi', 'budi@gmail.com', '123456'),
+('citra', 'citra@gmail.com', '123456'),
+('dedi', 'dedi@gmail.com', '123456'),
+('eka', 'eka@gmail.com', '123456'),
+('farah', 'farah@gmail.com', '123456'),
+('gina', 'gina@gmail.com', '123456'),
+('hadi', 'hadi@gmail.com', '123456'),
+('intan', 'intan@gmail.com', '123456'),
+('joko', 'joko@gmail.com', '123456');
 
 INSERT INTO profiles (user_id, name, address, phone) VALUES
 (1, 'Andi Saputra', 'Bandung', '0811111111'),
@@ -22,22 +22,22 @@ INSERT INTO profiles (user_id, name, address, phone) VALUES
 (9, 'Intan Permata', 'Semarang', '0899999999'),
 (10, 'Joko Widodo', 'Solo', '0810101010');
 
-INSERT INTO products (name, price, stock) VALUES
-('Kaos Polos Hitam', 75000, 50),
-('Kaos Polos Putih', 75000, 60),
-('Hoodie Abu', 150000, 30),
-('Hoodie Hitam', 155000, 25),
-('Kemeja Flanel Merah', 120000, 40),
-('Kemeja Flanel Biru', 120000, 35),
-('Celana Jeans Slim Fit', 200000, 25),
-('Celana Jeans Regular', 195000, 20),
-('Jaket Denim', 250000, 15),
-('Sweater Rajut', 130000, 45),
-('Kaos Oversize', 90000, 55),
-('Celana Chino', 180000, 30),
-('Topi Baseball', 50000, 70),
-('Tas Selempang', 110000, 40),
-('Sepatu Sneakers', 300000, 20);
+INSERT INTO products (product_code, name, price, stock) VALUES
+('PRD001', 'Kaos Polos Hitam', 75000, 50),
+('PRD002', 'Kaos Polos Putih', 75000, 60),
+('PRD003', 'Hoodie Abu', 150000, 30),
+('PRD004', 'Hoodie Hitam', 155000, 25),
+('PRD005', 'Kemeja Flanel Merah', 120000, 40),
+('PRD006', 'Kemeja Flanel Biru', 120000, 35),
+('PRD007', 'Celana Jeans Slim Fit', 200000, 25),
+('PRD008', 'Celana Jeans Regular', 195000, 20),
+('PRD009', 'Jaket Denim', 250000, 15),
+('PRD010', 'Sweater Rajut', 130000, 45),
+('PRD011', 'Kaos Oversize', 90000, 55),
+('PRD012', 'Celana Chino', 180000, 30),
+('PRD013', 'Topi Baseball', 50000, 70),
+('PRD014', 'Tas Selempang', 110000, 40),
+('PRD015', 'Sepatu Sneakers', 300000, 20);
 
 INSERT INTO orders (user_id) VALUES
 (1),(2),(3),(4),(5),
